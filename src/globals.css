@@ -31,4 +31,12 @@
   .nav-item {
     @apply px-4 py-1.5 rounded-full text-text-heading text-sm font-semibold hover:bg-secondary/10 hover:text-secondary transition duration-300;
   }
+
+  .hero-ring {
+    @apply absolute inset-0 border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-text/10 shadow-[0_0_80px_inset] shadow-text/10;
+  }
+}
+
+.mask {
+  mask-image: linear-gradient(transparent, black 10%, black 70%, transparent);
 }

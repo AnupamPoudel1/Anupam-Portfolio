@@ -1,7 +1,7 @@
 
 const Header = () => {
     return (
-        <div className="flex-center relative top-3">
+        <div className="flex-center fixed top-3 w-full z-10">
             <nav className="flex gap-1 p-0.5 border border-secondary/15 rounded-full bg-secondary/10 backdrop-blur">
                 <a
                     href="#"
