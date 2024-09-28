@@ -27,4 +27,8 @@
   .flex-col-center {
     @apply flex flex-col items-center justify-center;
   }
+
+  .nav-item {
+    @apply px-4 py-1.5 rounded-full text-text-heading text-sm font-semibold hover:bg-secondary/10 hover:text-secondary transition duration-300;
+  }
 }
