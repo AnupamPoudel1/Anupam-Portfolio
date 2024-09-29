@@ -3,6 +3,8 @@ import LightLandingPage from '../assets/images/light-saas-landing-page.png';
 import AiLandingPage from '../assets/images/ai-startup-landing-page.png';
 import CheckIcon from '../assets/icons/check-circle.svg';
 import ArrowUpright from '../assets/icons/arrow-up-right.svg';
+import SectionHeader from '../components/SectionHeader';
+import Card from '../components/Card';
 
 const portfolioProjects = [
     {
@@ -47,19 +49,16 @@ const Projects = () => {
     return (
         <section className='pb-16 lg:py-24'>
             <div className="container">
-                <div className="flex justify-center">
-                    <p className='uppercase font-semibold tracking-widest bg-gradient-to-r from-text to-secondary text-transparent bg-clip-text'>Real World Results</p>
-                </div>
-                <h2 className='font-poppins text-3xl md:text-5xl mt-6 text-center text-secondary font-bold'>Featured Projects</h2>
-                <p className='text-center text-text mt-4 md:text-lg lg:text-xl max-w-md mx-auto'>See how I transform concepts into engaging digital experiences</p>
+                <SectionHeader
+                    eyebrow={'Real World Results'}
+                    title={'Featured Projects'}
+                    description={'See how I transform concepts into engaging digital experiences'}
+                />
 
                 <div className='flex flex-col mt-10 md:mt-20 gap-20'>
                     {
                         portfolioProjects.map((project) => (
-                            <div
-                                className="bg-secondary/10 rounded-3xl relative z-0 overflow-hidden after:content[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:z-10 after:outline-text px-8 md:px-10 lg:px-20 pt-8 md:pt-12 lg:pt-16 after:pointer-events-none"
-                                key={project.title}
-                            >
+                            <Card key={project.title} className='px-8 md:px-10 lg:px-20 pt-8 md:pt-12 lg:pt-16'>
                                 <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                                     <div className='lg:pb-16'>
                                         <div className="bg-gradient-to-r from-text-heading to-secondary text-transparent bg-clip-text inline-flex font-bold uppercase tracking-widest text-sm gap-2">
@@ -102,11 +101,11 @@ const Projects = () => {
                                         <img
                                             src={project.image}
                                             alt={project.title}
-                                            className='mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none'
+                                            className='mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none rounded-3xl'
                                         />
                                     </div>
                                 </div>
-                            </div>
+                            </Card>
 
                         ))
                     }
