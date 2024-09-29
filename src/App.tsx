@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import Tape from "./components/Tape";
 import Hero from "./pages/Hero";
 import Projects from "./pages/Projects";
 
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Hero />
       <Projects />
+      <Tape />
     </div>
   )
 }

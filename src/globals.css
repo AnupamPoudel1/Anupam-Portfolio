@@ -40,9 +40,14 @@
 .mask {
   mask-image: linear-gradient(transparent, black 10%, black 70%, transparent);
 }
+.mask-text {
+  mask-image: linear-gradient(to right, transparent , black 10%, black 90%, transparent);
+}
 
-@layer utilities{
-  .container {
+
+  @layer utilities{
+    .container {
     @apply lg:max-w-5xl;
+    @apply lg:max-w-5xl
   }
 }
