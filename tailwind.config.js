@@ -32,8 +32,8 @@ export default {
 
       fontFamily: {
         primary: ["Inter", "sans-serif"],
-        poppins: ["Poppins", "sans-serif"],
-        overpass: ['Overpass', 'sans-serif'],
+        poppins: ["Lobster Two", "sans-serif"],
+        overpass: ['Concert One', 'sans-serif'],
         rose: ['Palanquin+Dark', 'sans-serif'],
       },
       fontWeight: {
@@ -62,13 +62,22 @@ export default {
         custom: `0px 4px 4px 0px rgba(0, 0, 0, 0.25)`,
       },
       animation: {
-        'ping-large': "ping-large 1s ease-in-out infinite"
+        'ping-large': "ping-large 1s ease-in-out infinite",
+        'move-left': "move-left 20s  linear infinite"
       },
       keyframes: {
         'ping-large': {
           '75%, 100%': {
             transform: 'scale(3)',
             opacity: '0',
+          }
+        },
+        'move-left': {
+          '0%': {
+            transform: 'translateX(0%)'
+          },
+          '100%': {
+            transform: 'translateX(-50%)'
           }
         }
       }
