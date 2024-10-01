@@ -1,5 +1,5 @@
 import { Fragment } from 'react/jsx-runtime';
-import StarIcon from '../assets/icons/star.svg';
+import { IoStarSharp } from "react-icons/io5";
 
 const words: string[] = [
     'Performant',
@@ -27,11 +27,7 @@ const Tape = () => {
                                     words.map((word) => (
                                         <div key={word} className='inline-flex gap-4 items-center'>
                                             <span className='text-sm uppercase font-extrabold text-primary'>{word}</span>
-                                            <img
-                                                src={StarIcon}
-                                                alt="Star"
-                                                className='size-6 text-primary -rotate-12'
-                                            />
+                                            <IoStarSharp className='size-6 text-primary -rotate-12' />
                                         </div>
                                     ))
                                 }

@@ -1,3 +1,4 @@
+import { GoArrowUpRight } from "react-icons/go";
 
 const Contact = () => {
     return (
@@ -12,7 +13,12 @@ const Contact = () => {
                             </p>
                         </div>
                         <div>
-                            <button className="inline-flex items-center bg-primary text-text px-6 h-12 rounded-xl font-semibold w-max border border-text">Contact Me</button>
+                            <button className="inline-flex gap-4 items-center bg-primary text-text px-6 h-12 rounded-xl font-semibold w-max border border-text">
+                                <span>
+                                    Contact Me
+                                </span>
+                                <GoArrowUpRight className='size-6' />
+                            </button>
                         </div>
                     </div>
                 </div>

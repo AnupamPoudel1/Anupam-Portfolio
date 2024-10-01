@@ -1,8 +1,8 @@
 import memojiImage from '../assets/images/memoji-computer.png';
-import ArrowDown from '../assets/icons/arrow-down.svg';
+import { FaArrowDownLong } from "react-icons/fa6";
 import grainImage from '../assets/images/grain.jpg';
-import starIcon from '../assets/icons/star.svg';
-import sparcleIcon from '../assets/icons/sparkle.svg';
+import { GrStar } from "react-icons/gr";
+import { MdOutlineStarBorder } from "react-icons/md";
 import Orbit from '../components/Orbit';
 
 const Hero = () => {
@@ -20,19 +20,11 @@ const Hero = () => {
                 <div className="size-[1220px] hero-ring"></div>
 
                 <Orbit size={430} rotation={-13} should={true} duration='30s' shouldSpin={true} spinDuration='5s'>
-                    <img
-                        src={sparcleIcon}
-                        alt="stars"
-                        className='size-8 opacity-20'
-                    />
+                    <MdOutlineStarBorder className='size-8 opacity-20' />
                 </Orbit>
 
                 <Orbit size={440} rotation={79} should={true} duration='32s' shouldSpin={true} spinDuration='5s'>
-                    <img
-                        src={sparcleIcon}
-                        alt="stars"
-                        className='size-5 opacity-20'
-                    />
+                    <MdOutlineStarBorder className='size-5 opacity-20' />
                 </Orbit>
 
                 <Orbit size={510} rotation={-40} should={true} duration='34s'>
@@ -42,27 +34,17 @@ const Hero = () => {
                 </Orbit>
 
                 <Orbit size={530} rotation={178} should={true} duration='36s' shouldSpin={true} spinDuration='5s'>
-                    <img
-                        src={sparcleIcon}
-                        alt="stars"
-                        className='size-10 opacity-20'
-                    />
+                    <MdOutlineStarBorder className='size-10 opacity-20' />
                 </Orbit>
 
                 <Orbit size={550} rotation={20} should={true} duration='38s' shouldSpin={true} spinDuration='10s'>
-                    <img
-                        src={starIcon}
-                        alt="stars"
+                    <GrStar
                         className='size-12'
                     />
                 </Orbit>
 
                 <Orbit size={590} rotation={98} should={true} duration='40s' shouldSpin={true} spinDuration='10s'>
-                    <img
-                        src={starIcon}
-                        alt="stars"
-                        className='size-8'
-                    />
+                    <GrStar className='size-8' />
                 </Orbit>
 
                 <Orbit size={650} rotation={-5} should={true} duration='42s'>
@@ -72,11 +54,7 @@ const Hero = () => {
                 </Orbit>
 
                 <Orbit size={710} rotation={145} should={true} duration='44s' shouldSpin={true} spinDuration='5s'>
-                    <img
-                        src={sparcleIcon}
-                        alt="stars"
-                        className='size-14 opacity-20'
-                    />
+                    <MdOutlineStarBorder className='size-14 opacity-20' />
                 </Orbit>
 
                 <Orbit size={710} rotation={80} should={true} duration='46s'>
@@ -86,11 +64,7 @@ const Hero = () => {
                 </Orbit>
 
                 <Orbit size={800} rotation={-72} should={true} duration='48s' shouldSpin={true} spinDuration='10s'>
-                    <img
-                        src={starIcon}
-                        alt="stars"
-                        className='size-28'
-                    />
+                    <GrStar className='size-28' />
                 </Orbit>
             </div>
 
@@ -133,11 +107,7 @@ const Hero = () => {
                         <span className='font-semibold'>
                             Explore My Work
                         </span>
-                        <img
-                            src={ArrowDown}
-                            alt="arrow down"
-                            className='size-4'
-                        />
+                        <FaArrowDownLong className='size-4' />
                     </button>
                 </div>
             </div>

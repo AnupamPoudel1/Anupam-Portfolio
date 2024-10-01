@@ -1,47 +1,47 @@
-import DarkLandingPage from '../assets/images/dark-saas-landing-page.png';
-import LightLandingPage from '../assets/images/light-saas-landing-page.png';
-import AiLandingPage from '../assets/images/ai-startup-landing-page.png';
+import SkillSpot from '../assets/images/skillspot.png';
+import SrAqua from '../assets/images/sraqua.png';
+import NexusAccounting from '../assets/images/nexus.png';
 import CheckIcon from '../assets/icons/check-circle.svg';
-import ArrowUpright from '../assets/icons/arrow-up-right.svg';
 import SectionHeader from '../components/SectionHeader';
 import Card from '../components/Card';
+import { GoArrowUpRight } from "react-icons/go";
 
 const portfolioProjects = [
     {
-        company: 'Acme Corp',
-        year: '2002',
-        title: 'Dark SaaS Landing Page',
+        company: 'Skill Spot Australia',
+        year: '2024',
+        title: 'Blogs and Notice Page',
         results: [
-            { title: 'Enhanced user experience by 40%' },
-            { title: 'Enhanced site speed by 40%' },
-            { title: 'Enhanced mobile traffic by 25%' },
+            { title: 'Enhanced user experience' },
+            { title: 'Enhanced site speed' },
+            { title: 'Enhanced mobile traffic' },
         ],
-        link: 'https://localhost:5173',
-        image: DarkLandingPage
+        link: 'https://skill-spot-aus.vercel.app/',
+        image: SkillSpot
     },
     {
-        company: 'Acme Corp',
-        year: '2002',
-        title: 'Light SaaS Landing Page',
+        company: 'Sr Aqua and Pet House',
+        year: '2023',
+        title: 'Aquatic Pet Shop Landing Page',
         results: [
-            { title: 'Enhanced user experience by 40%' },
-            { title: 'Enhanced site speed by 40%' },
-            { title: 'Enhanced mobile traffic by 25%' },
+            { title: 'Boosted sales' },
+            { title: 'Enhanced customer reach' },
+            { title: 'Increased brand awareness' },
         ],
-        link: 'https://localhost:5173',
-        image: LightLandingPage
+        link: 'https://sraquaandpethouse.com',
+        image: SrAqua
     },
     {
-        company: 'Acme Corp',
-        year: '2002',
-        title: 'AI SaaS Landing Page',
+        company: 'Nexus Accounting',
+        year: '2024',
+        title: 'Informational Landing Page',
         results: [
-            { title: 'Enhanced user experience by 40%' },
-            { title: 'Enhanced site speed by 40%' },
-            { title: 'Enhanced mobile traffic by 25%' },
+            { title: 'Enhanced user experience' },
+            { title: 'Increased user engagement' },
+            { title: 'Enhanced business' },
         ],
-        link: 'https://localhost:5173',
-        image: AiLandingPage
+        link: 'https://nexus-accounting.vercel.app/',
+        image: NexusAccounting
     }
 ]
 
@@ -67,7 +67,7 @@ const Projects = () => {
                             >
                                 <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                                     <div className='lg:pb-16'>
-                                        <div className="bg-gradient-to-r from-text-heading to-secondary text-transparent bg-clip-text inline-flex font-bold uppercase tracking-widest text-sm gap-2">
+                                        <div className="bg-gradient-to-r from-text-heading to-text text-transparent bg-clip-text inline-flex font-bold uppercase tracking-widest text-sm gap-2">
                                             <span>{project.company}</span>
                                             <span>&bull;</span>
                                             <span>{project.year}</span>
@@ -95,11 +95,7 @@ const Projects = () => {
                                                 <span>
                                                     Visit Live Site
                                                 </span>
-                                                <img
-                                                    src={ArrowUpright}
-                                                    alt="Arrow Up Right Icon"
-                                                    className='size-4'
-                                                />
+                                                <GoArrowUpRight className='size-6' />
                                             </button>
                                         </a>
                                     </div>
