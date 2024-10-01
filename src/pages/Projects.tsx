@@ -57,8 +57,14 @@ const Projects = () => {
 
                 <div className='flex flex-col mt-10 md:mt-20 gap-20'>
                     {
-                        portfolioProjects.map((project) => (
-                            <Card key={project.title} className='px-8 md:px-10 lg:px-20 pt-8 md:pt-12 lg:pt-16'>
+                        portfolioProjects.map((project, index) => (
+                            <Card
+                                key={project.title}
+                                className='px-8 md:px-10 lg:px-20 pt-8 md:pt-12 lg:pt-16 sticky'
+                                style={{
+                                    top: `calc(80px + ${index * 40}px)`
+                                }}
+                            >
                                 <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                                     <div className='lg:pb-16'>
                                         <div className="bg-gradient-to-r from-text-heading to-secondary text-transparent bg-clip-text inline-flex font-bold uppercase tracking-widest text-sm gap-2">

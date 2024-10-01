@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
+import { transform } from 'typescript';
+
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
@@ -59,6 +61,17 @@ export default {
         input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
         custom: `0px 4px 4px 0px rgba(0, 0, 0, 0.25)`,
       },
+      animation: {
+        'ping-large': "ping-large 1s ease-in-out infinite"
+      },
+      keyframes: {
+        'ping-large': {
+          '75%, 100%': {
+            transform: 'scale(3)',
+            opacity: '0',
+          }
+        }
+      }
     },
   },
   plugins: [addVaraibleForColors],

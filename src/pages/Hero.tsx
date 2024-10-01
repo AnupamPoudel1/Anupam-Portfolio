@@ -19,21 +19,45 @@ const Hero = () => {
                 <div className="size-[1020px] hero-ring"></div>
                 <div className="size-[1220px] hero-ring"></div>
 
-                <Orbit size={800} rotation={-72}>
+                <Orbit size={430} rotation={-13} should={true} duration='30s' shouldSpin={true} spinDuration='5s'>
                     <img
-                        src={starIcon}
+                        src={sparcleIcon}
                         alt="stars"
-                        className='size-28'
+                        className='size-8 opacity-20'
                     />
                 </Orbit>
-                <Orbit size={550} rotation={20}>
+
+                <Orbit size={440} rotation={79} should={true} duration='32s' shouldSpin={true} spinDuration='5s'>
+                    <img
+                        src={sparcleIcon}
+                        alt="stars"
+                        className='size-5 opacity-20'
+                    />
+                </Orbit>
+
+                <Orbit size={510} rotation={-40} should={true} duration='34s'>
+                    <div
+                        className='size-3 bg-secondary rounded-full opacity-20'
+                    />
+                </Orbit>
+
+                <Orbit size={530} rotation={178} should={true} duration='36s' shouldSpin={true} spinDuration='5s'>
+                    <img
+                        src={sparcleIcon}
+                        alt="stars"
+                        className='size-10 opacity-20'
+                    />
+                </Orbit>
+
+                <Orbit size={550} rotation={20} should={true} duration='38s' shouldSpin={true} spinDuration='10s'>
                     <img
                         src={starIcon}
                         alt="stars"
                         className='size-12'
                     />
                 </Orbit>
-                <Orbit size={590} rotation={98}>
+
+                <Orbit size={590} rotation={98} should={true} duration='40s' shouldSpin={true} spinDuration='10s'>
                     <img
                         src={starIcon}
                         alt="stars"
@@ -41,28 +65,13 @@ const Hero = () => {
                     />
                 </Orbit>
 
-                <Orbit size={430} rotation={-13}>
-                    <img
-                        src={sparcleIcon}
-                        alt="stars"
-                        className='size-8 opacity-20'
+                <Orbit size={650} rotation={-5} should={true} duration='42s'>
+                    <div
+                        className='size-3 bg-secondary rounded-full opacity-20'
                     />
                 </Orbit>
-                <Orbit size={440} rotation={79}>
-                    <img
-                        src={sparcleIcon}
-                        alt="stars"
-                        className='size-5 opacity-20'
-                    />
-                </Orbit>
-                <Orbit size={530} rotation={178}>
-                    <img
-                        src={sparcleIcon}
-                        alt="stars"
-                        className='size-10 opacity-20'
-                    />
-                </Orbit>
-                <Orbit size={710} rotation={145}>
+
+                <Orbit size={710} rotation={145} should={true} duration='44s' shouldSpin={true} spinDuration='5s'>
                     <img
                         src={sparcleIcon}
                         alt="stars"
@@ -70,19 +79,17 @@ const Hero = () => {
                     />
                 </Orbit>
 
-                <Orbit size={710} rotation={80}>
+                <Orbit size={710} rotation={80} should={true} duration='46s'>
                     <div
                         className='size-3 bg-secondary rounded-full opacity-20'
                     />
                 </Orbit>
-                <Orbit size={510} rotation={-40}>
-                    <div
-                        className='size-3 bg-secondary rounded-full opacity-20'
-                    />
-                </Orbit>
-                <Orbit size={650} rotation={-5}>
-                    <div
-                        className='size-3 bg-secondary rounded-full opacity-20'
+
+                <Orbit size={800} rotation={-72} should={true} duration='48s' shouldSpin={true} spinDuration='10s'>
+                    <img
+                        src={starIcon}
+                        alt="stars"
+                        className='size-28'
                     />
                 </Orbit>
             </div>
@@ -95,7 +102,11 @@ const Hero = () => {
                         className='size-[100px]'
                     />
                     <div className='bg-secondary border border-text px-4 py-1.5 inline-flex items-center gap-4 rounded-lg'>
-                        <div className='bg-green-600 size-2.5 rounded-full'></div>
+                        <div className='bg-green-600 size-2.5 rounded-full relative'>
+                            <div className="absolute inset-0 size-2.5 bg-green-600 rounded-full animate-ping-large">
+
+                            </div>
+                        </div>
                         <div className='text-sm font-medium'>
                             Available for new projects.
                         </div>
