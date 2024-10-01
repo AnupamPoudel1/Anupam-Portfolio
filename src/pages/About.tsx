@@ -11,6 +11,8 @@ import MapImage from '../assets/images/map.png';
 import Avatar from '../assets/images/memoji-smile.png';
 import CardHeading from "../components/CardHeading";
 import ToolboxItems from "../components/ToolboxItems";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 
 const toolboxItems = [
     {
@@ -85,6 +87,9 @@ const hobbies = [
 ]
 
 const About = () => {
+
+    const dragConstraint = useRef(null);
+
     return (
         <div className="py-16 lg:py-24">
             <div className="container">
@@ -113,11 +118,12 @@ const About = () => {
                             <ToolboxItems
                                 items={toolboxItems}
                                 className=""
+                                itemsWrapperClassName="animate-move-left"
                             />
                             <ToolboxItems
                                 items={toolboxItems}
                                 className="mt-6"
-                                itemsWrapperClassName="-translate-x-1/2"
+                                itemsWrapperClassName="animate-move-right"
                             />
                         </Card>
                     </div>
@@ -128,19 +134,21 @@ const About = () => {
                                 description="Explore my interests and hobbies beyond the digital realm"
                                 className="px-6 py-6"
                             />
-                            <div className="relative flex-1">
+                            <div className="relative flex-1" ref={dragConstraint}>
                                 {hobbies.map((hobby) => (
-                                    <div
+                                    <motion.div
                                         key={hobby.title}
                                         className="inline-flex gap-2 px-6 bg-gradient-to-r from-text-heading to-secondary text-primary rounded-full py-1.5 absolute"
                                         style={{
                                             left: hobby.left,
                                             top: hobby.top
                                         }}
+                                        drag
+                                        dragConstraints={dragConstraint}
                                     >
                                         <span className="font-medium">{hobby.title}</span>
                                         <span>{hobby.emoji}</span>
-                                    </div>
+                                    </motion.div>
                                 ))}
                             </div>
                         </Card>
@@ -150,7 +158,7 @@ const About = () => {
                                 alt="Map Image"
                                 className="h-full w-full object-cover"
                             />
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-text-heading to-secondary after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-secondary">
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-text-heading to-secondary after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-secondary after:animate-ping-large">
                                 <img
                                     src={Avatar}
                                     alt="My Avatar"
