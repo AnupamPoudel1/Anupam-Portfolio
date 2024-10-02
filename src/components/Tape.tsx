@@ -21,7 +21,7 @@ const Tape = () => {
             <div className='bg-gradient-to-r from-text-heading to-secondary -rotate-3 -mx-1'>
                 <div className="flex mask-text">
                     <div className='flex flex-none gap-4 pr-4 py-3 -translate-x-0 animate-move-left'>
-                        {[...new Array(2)].fill(0).map((idx) => (
+                        {[...new Array(2)].fill(0).map((_, idx) => (
                             <Fragment key={idx}>
                                 {
                                     words.map((word) => (

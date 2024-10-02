@@ -15,26 +15,26 @@ const testimonials = [
         avatar: Avatar1
     },
     {
-        name: 'Roju Ghimire',
-        position: 'My wife',
+        name: 'Ganesh Kunwar',
+        position: 'Friend',
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum itaque sapiente asperiores esse sunt ipsam pariatur inventore exercitationem qui consequuntur.',
         avatar: Avatar2
     },
     {
-        name: 'Roju Ghimire',
-        position: 'My wife',
+        name: 'Rajan',
+        position: 'Sr Aqua Owner',
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum itaque sapiente asperiores esse sunt ipsam pariatur inventore exercitationem qui consequuntur.',
         avatar: Avatar3
     },
     {
-        name: 'Roju Ghimire',
-        position: 'My wife',
+        name: 'Pradeep Phuyal',
+        position: 'SSA Owner',
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum itaque sapiente asperiores esse sunt ipsam pariatur inventore exercitationem qui consequuntur.',
         avatar: Avatar4
     },
     {
-        name: 'Roju Ghimire',
-        position: 'My wife',
+        name: 'Akshar Lamichhane',
+        position: 'Friend',
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum itaque sapiente asperiores esse sunt ipsam pariatur inventore exercitationem qui consequuntur.',
         avatar: Avatar5
     }
@@ -51,7 +51,7 @@ const Testimonials = () => {
                 />
                 <div className='mt-12 lg:mt-16 flex overflow-x-clip mask-text py-4 -my-4'>
                     <div className="flex flex-none gap-8 pr-8 -translate-x-1/2 animate-move-left [animation-duration:60s] hover:[animation-play-state:paused]">
-                        {[...new Array(2)].fill(0).map((idx) => (
+                        {[...new Array(2)].fill(0).map((_, idx) => (
                             <Fragment key={idx}>
                                 {testimonials.map((testimonial) => (
                                     <Card key={testimonial.name} className='p-6 md:p-8 max-w-xs md:max-w-md hover:-rotate-3 transition duration-500'>

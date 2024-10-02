@@ -2,7 +2,7 @@ import { GoArrowUpRight } from "react-icons/go";
 
 const Contact = () => {
     return (
-        <div className="py-16 lg:py-24">
+        <section className="py-16 lg:py-24" id="contact">
             <div className="container">
                 <div className="bg-gradient-to-r from-text-heading to-secondary py-8 px-10 rounded-3xl text-center md:text-left">
                     <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
@@ -13,17 +13,23 @@ const Contact = () => {
                             </p>
                         </div>
                         <div>
-                            <button className="inline-flex gap-4 items-center bg-primary text-text px-6 h-12 rounded-xl font-semibold w-max border border-text">
-                                <span>
-                                    Contact Me
-                                </span>
-                                <GoArrowUpRight className='size-6' />
+                            <button className="bg-primary text-text px-6 h-12 rounded-xl font-semibold w-max border border-text">
+                                <a
+                                    href="https://linkedin.com/in/anupampoudel"
+                                    className="inline-flex items-center gap-4"
+                                    target="_blank"
+                                >
+                                    <span>
+                                        Contact Me
+                                    </span>
+                                    <GoArrowUpRight className='size-6' />
+                                </a>
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

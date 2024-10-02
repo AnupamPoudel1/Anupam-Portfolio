@@ -10,19 +10,19 @@ const Header = () => {
                     Home
                 </a>
                 <a
-                    href="#"
+                    href="#projects"
                     className="nav-item"
                 >
                     Projects
                 </a>
                 <a
-                    href="#"
+                    href="#about"
                     className="nav-item"
                 >
                     About
                 </a>
                 <a
-                    href="#"
+                    href="#contact"
                     className="nav-item bg-secondary text-primary hover:bg-text hover:text-primary"
                 >
                     Contact

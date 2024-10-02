@@ -1,19 +1,21 @@
+import { GoArrowUpRight } from "react-icons/go";
+
 const footerLinks = [
     {
         title: 'YouTube',
-        href: 'youtube.com'
+        href: 'https://youtube.com'
     },
     {
         title: 'Linked In',
-        href: 'linkedin.com'
+        href: 'https://linkedin.com'
     },
     {
         title: 'Instagram',
-        href: 'instagram.com'
+        href: 'https://instagram.com'
     },
     {
         title: 'Facebook',
-        href: 'facebook.com'
+        href: 'https://facebook.com'
     },
 ]
 
@@ -30,10 +32,16 @@ const Footer = () => {
                     </div>
                     <nav className="flex flex-col md:flex-row items-center gap-8">
                         {footerLinks.map((link) => (
-                            <a href={link.href} key={link.title} className="font-semibold text-secondary">
+                            <a
+                                href={link.href}
+                                key={link.title}
+                                className="font-semibold text-secondary inline-flex items-center gap-2"
+                                target="_blank"
+                            >
                                 <span>
                                     {link.title}
                                 </span>
+                                <GoArrowUpRight className='size-4' />
                             </a>
                         ))}
                     </nav>

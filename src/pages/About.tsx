@@ -2,10 +2,13 @@ import Card from "../components/Card"
 import SectionHeader from "../components/SectionHeader"
 import BookImage from '../assets/images/book-cover.png';
 import JavascriptIcon from '../assets/icons/square-js.svg';
+import { IoLogoJavascript } from "react-icons/io5";
 import HtmlIcon from '../assets/icons/html5.svg';
 import CssIcon from '../assets/icons/css3.svg';
 import ReactIcon from '../assets/icons/react.svg';
 import GithubIcon from '../assets/icons/github.svg';
+import { FaGithub, FaChrome, FaReact, FaHtml5, FaCss3, FaNode } from "react-icons/fa";
+import { SiMongodb, SiTypescript } from "react-icons/si";
 import ChromeIcon from '../assets/icons/chrome.svg';
 import MapImage from '../assets/images/map.png';
 import Avatar from '../assets/images/memoji-smile.png';
@@ -16,28 +19,40 @@ import { useRef } from "react";
 
 const toolboxItems = [
     {
-        title: 'Javascript',
-        icons: JavascriptIcon
+        title: 'JavaScript',
+        Icon: IoLogoJavascript
+    },
+    {
+        title: 'TypeScript',
+        Icon: SiTypescript
     },
     {
         title: 'HTML5',
-        icons: HtmlIcon
+        Icon: FaHtml5
     },
     {
         title: 'CSS3',
-        icons: CssIcon
+        Icon: FaCss3
     },
     {
         title: 'React',
-        icons: ReactIcon
+        Icon: FaReact
     },
     {
         title: 'Github',
-        icons: GithubIcon
+        Icon: FaGithub
     },
     {
         title: 'Chrome',
-        icons: ChromeIcon
+        Icon: FaChrome
+    },
+    {
+        title: 'Node',
+        Icon: FaNode
+    },
+    {
+        title: 'MongoDB',
+        Icon: SiMongodb
     },
 ]
 
@@ -91,7 +106,7 @@ const About = () => {
     const dragConstraint = useRef(null);
 
     return (
-        <div className="py-16 lg:py-24">
+        <section className="py-16 lg:py-24" id="about">
             <div className="container">
                 <SectionHeader
                     eyebrow={'About me'}
@@ -169,7 +184,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
