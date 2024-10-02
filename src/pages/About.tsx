@@ -1,13 +1,14 @@
 import Card from "../components/Card"
 import SectionHeader from "../components/SectionHeader"
-import BookImage from '../assets/images/book-cover.png';
+import BookImage from '../assets/images/book.png';
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaGithub, FaChrome, FaReact, FaHtml5, FaCss3, FaNode } from "react-icons/fa";
-import { SiMongodb, SiTypescript } from "react-icons/si";
+import { SiMongodb, SiTypescript, SiMysql } from "react-icons/si";
 import MapImage from '../assets/images/map.png';
 import Avatar from '../assets/images/memoji-smile.png';
 import CardHeading from "../components/CardHeading";
 import ToolboxItems from "../components/ToolboxItems";
+import Resume from '../assets/resume.pdf';
 import { motion } from "framer-motion";
 import { useRef } from "react";
 
@@ -48,32 +49,36 @@ const toolboxItems = [
         title: 'MongoDB',
         Icon: SiMongodb
     },
+    {
+        title: 'My SQL',
+        Icon: SiMysql
+    },
 ]
 
 const hobbies = [
     {
         title: 'Painting',
         emoji: '🎨',
-        top: '5%',
-        left: '5%'
+        top: '1%',
+        left: '1%'
     },
     {
         title: 'Photography',
         emoji: '📷',
-        top: '5%',
-        left: '50%'
+        top: '1%',
+        left: '45%'
     },
     {
         title: 'Gaming',
         emoji: '🎮',
-        top: '35%',
+        top: '25%',
         left: '10%'
     },
     {
         title: 'Music',
         emoji: '🎶',
-        top: '40%',
-        left: '70%'
+        top: '30%',
+        left: '60%'
     },
     {
         title: 'Fitness',
@@ -84,7 +89,7 @@ const hobbies = [
     {
         title: 'Reading',
         emoji: '📖',
-        top: '65%',
+        top: '70%',
         left: '5%'
     },
     {
@@ -93,6 +98,13 @@ const hobbies = [
         top: '70%',
         left: '45%'
     },
+    {
+        title: 'Movies',
+        emoji: '🎬',
+        top: '50%',
+        left: '5%'
+    },
+
 ]
 
 const About = () => {
@@ -111,11 +123,13 @@ const About = () => {
                     <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
                         <Card className="h-[320px] md:col-span-2 lg:col-span-1">
                             <CardHeading
-                                title="My Reads"
-                                description="Explore the books shaping my perspective"
+                                title="My Resume"
+                                description="Download my resume"
                             />
                             <div className="w-40 mx-auto mt-2 md:mt-0">
-                                <img src={BookImage} alt="Book Image" />
+                                <a href={Resume} download>
+                                    <img src={BookImage} alt="Book Image" />
+                                </a>
                             </div>
                         </Card>
                         <Card className="h-[320px] md:col-span-3 lg:col-span-2">
@@ -147,7 +161,7 @@ const About = () => {
                                 {hobbies.map((hobby) => (
                                     <motion.div
                                         key={hobby.title}
-                                        className="inline-flex gap-2 px-6 bg-gradient-to-r from-text-heading to-secondary text-primary rounded-full py-1.5 absolute"
+                                        className="inline-flex gap-2 px-6 bg-gradient-to-r from-text-heading to-secondary text-primary rounded-full py-1.5 absolute cursor-pointer"
                                         style={{
                                             left: hobby.left,
                                             top: hobby.top

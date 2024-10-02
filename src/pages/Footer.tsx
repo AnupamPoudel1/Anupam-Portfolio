@@ -22,7 +22,7 @@ const footerLinks = [
 const Footer = () => {
     return (
         <footer className="relative z-0 overflow-x-clip">
-            <div className="absolute h-[400px] w-[1600px] bottom-0 left-1/2 -translate-x-1/2 bg-text footer-mask -z-10">
+            <div className="absolute h-[200px] w-[1600px] bottom-0 left-1/2 -translate-x-1/2 bg-text footer-mask -z-10">
 
             </div>
             <div className="container">

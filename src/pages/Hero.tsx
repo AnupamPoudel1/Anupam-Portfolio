@@ -7,7 +7,7 @@ import Orbit from '../components/Orbit';
 
 const Hero = () => {
     return (
-        <div className='py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip'>
+        <section className='py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip' id='home'>
             <div className="absolute inset-0 mask pointer-events-none">
                 <div className="absolute inset-0 -z-30 opacity-5" style={{
                     backgroundImage: `url(${grainImage})`
@@ -111,7 +111,7 @@ const Hero = () => {
                     </button>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
