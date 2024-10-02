@@ -1,7 +1,6 @@
 import SkillSpot from '../assets/images/skillspot.png';
 import SrAqua from '../assets/images/sraqua.png';
 import NexusAccounting from '../assets/images/nexus.png';
-import CheckIcon from '../assets/icons/check-circle.svg';
 import { FaCheckCircle } from "react-icons/fa";
 import SectionHeader from '../components/SectionHeader';
 import Card from '../components/Card';
