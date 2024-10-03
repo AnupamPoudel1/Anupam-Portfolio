@@ -5,7 +5,7 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { FaGithub, FaChrome, FaReact, FaHtml5, FaCss3, FaNode } from "react-icons/fa";
 import { SiMongodb, SiTypescript, SiMysql } from "react-icons/si";
 import MapImage from '../assets/images/map.png';
-import Avatar from '../assets/images/memoji-smile.png';
+import Avatar from '../assets/images/bitmoji2.png';
 import CardHeading from "../components/CardHeading";
 import ToolboxItems from "../components/ToolboxItems";
 import Resume from '../assets/resume.pdf';
@@ -185,7 +185,7 @@ const About = () => {
                                 <img
                                     src={Avatar}
                                     alt="My Avatar"
-                                    className="size-20"
+                                    className="size-20 rounded-full"
                                 />
                             </div>
                         </Card>

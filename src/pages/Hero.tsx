@@ -1,4 +1,4 @@
-import memojiImage from '../assets/images/memoji-computer.png';
+import memojiImage from '../assets/images/bitmoji1.jpg';
 import { FaArrowDownLong } from "react-icons/fa6";
 import grainImage from '../assets/images/grain.jpg';
 import { GrStar } from "react-icons/gr";
@@ -94,21 +94,24 @@ const Hero = () => {
                     </p>
                 </div>
                 <div className='flex-center flex-col md:flex-row mt-8 gap-4'>
-                    <button className='inline-flex items-center gap-2 border border-secondary px-6 h-12 rounded-xl bg-secondary text-primary'>
-                        <span>
-                            👋
-                        </span>
-                        <span className='font-semibold'>
-                            Let's Connect
-                        </span>
-                    </button>
-
-                    <button className='inline-flex items-center gap-2 border border-text px-6 h-12 rounded-xl'>
-                        <span className='font-semibold'>
-                            Explore My Work
-                        </span>
-                        <FaArrowDownLong className='size-4' />
-                    </button>
+                    <a href="https://linkedin.com/in/anupampoudel">
+                        <button className='inline-flex items-center gap-2 border border-secondary px-6 h-12 rounded-xl bg-secondary text-primary'>
+                            <span>
+                                👋
+                            </span>
+                            <span className='font-semibold'>
+                                Let's Connect
+                            </span>
+                        </button>
+                    </a>
+                    <a href="#projects">
+                        <button className='inline-flex items-center gap-2 border border-text px-6 h-12 rounded-xl'>
+                            <span className='font-semibold'>
+                                Explore My Work
+                            </span>
+                            <FaArrowDownLong className='size-4' />
+                        </button>
+                    </a>
                 </div>
             </div>
         </section>

@@ -3,19 +3,19 @@ import { GoArrowUpRight } from "react-icons/go";
 const footerLinks = [
     {
         title: 'YouTube',
-        href: 'https://youtube.com'
+        href: 'https://www.youtube.com/@anupampoudel3034'
     },
     {
         title: 'Linked In',
-        href: 'https://linkedin.com'
+        href: 'https://linkedin.com/in/anupampoudel'
     },
     {
         title: 'Instagram',
-        href: 'https://instagram.com'
+        href: 'https://www.instagram.com/anupam_poudel15/'
     },
     {
         title: 'Facebook',
-        href: 'https://facebook.com'
+        href: 'https://www.facebook.com/djanupamking/'
     },
 ]
 
