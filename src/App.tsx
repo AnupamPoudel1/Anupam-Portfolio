@@ -10,7 +10,7 @@ import Testimonials from "./pages/Testimonials";
 function App() {
 
   return (
-    <div className="bg-primary text-text antialiased font-primary">
+    <div className="bg-primary text-text antialiased font-text-primary">
       <Header />
       <Hero />
       <Projects />

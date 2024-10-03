@@ -72,7 +72,7 @@ const Projects = () => {
                                             <span>&bull;</span>
                                             <span>{project.year}</span>
                                         </div>
-                                        <h3 className='font-poppins text-2xl md:text4xl mt-2 md:mt-5 text-secondary'>{project.title}</h3>
+                                        <h3 className='font-text-secondary font-bold text-2xl md:text4xl mt-2 md:mt-5 text-secondary'>{project.title}</h3>
                                         <hr className='border-t-2 border-text-heading/40 mt-4 md:mt-5' />
                                         <ul className='flex flex-col gap-4 mt-4 md:mt-5 text-text-heading'>
                                             {project.results.map((result) => (

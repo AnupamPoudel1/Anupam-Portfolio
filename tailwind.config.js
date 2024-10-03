@@ -1,7 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 
-import { transform } from 'typescript';
-
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
@@ -29,13 +27,6 @@ export default {
     },
 
     extend: {
-
-      fontFamily: {
-        primary: ["Inter", "sans-serif"],
-        poppins: ["Lobster Two", "sans-serif"],
-        overpass: ['Concert One', 'sans-serif'],
-        rose: ['Palanquin+Dark', 'sans-serif'],
-      },
       fontWeight: {
         regular: 400,
         medium: 500,
