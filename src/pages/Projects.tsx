@@ -1,6 +1,7 @@
 import SkillSpot from '../assets/images/skillspot.png';
 import SrAqua from '../assets/images/sraqua.png';
 import NexusAccounting from '../assets/images/nexus.png';
+import ChatApp from '../assets/images/chatapp.jpg';
 import { FaCheckCircle } from "react-icons/fa";
 import SectionHeader from '../components/SectionHeader';
 import Card from '../components/Card';
@@ -18,6 +19,17 @@ const portfolioProjects = [
         ],
         link: 'https://skill-spot-aus.vercel.app/',
         image: SkillSpot
+    },
+    {
+        company: 'Personal Project',
+        year: '2024',
+        title: 'Anoynomous Chat App',
+        results: [
+            { title: 'Chat anoynomously' },
+            { title: 'Personal Practice Project' },
+        ],
+        link: '#',
+        image: ChatApp
     },
     {
         company: 'Sr Aqua and Pet House',
