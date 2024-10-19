@@ -154,7 +154,7 @@ const About = () => {
                         <Card className="h-[320px] flex flex-col md:col-span-3 lg:col-span-2">
                             <CardHeading
                                 title="Beyond the Code"
-                                description="Explore my interests and hobbies beyond the digital realm"
+                                description="Explore my interests and hobbies beyond the digital realm (Drag to see hidden hobbies)"
                                 className="px-6 py-6"
                             />
                             <div className="relative flex-1" ref={dragConstraint}>

@@ -99,7 +99,7 @@ const Projects = () => {
                                                 </li>
                                             ))}
                                         </ul>
-                                        <a href={project.link}>
+                                        <a href={project.link} target='_blank'>
                                             <button
                                                 className='bg-secondary text-primary h-12 w-full md:w-auto px-6 font-semibold rounded-xl inline-flex items-center justify-center gap-2 mt-8'
                                             >
