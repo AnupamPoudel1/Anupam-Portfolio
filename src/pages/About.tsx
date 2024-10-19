@@ -3,7 +3,7 @@ import SectionHeader from "../components/SectionHeader"
 import BookImage from '../assets/images/book.png';
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaGithub, FaChrome, FaReact, FaHtml5, FaCss3, FaNode } from "react-icons/fa";
-import { SiMongodb, SiTypescript, SiMysql } from "react-icons/si";
+import { SiMongodb, SiTypescript, SiMysql, SiExpress } from "react-icons/si";
 import MapImage from '../assets/images/map.png';
 import Avatar from '../assets/images/bitmoji2.png';
 import CardHeading from "../components/CardHeading";
@@ -30,7 +30,7 @@ const toolboxItems = [
         Icon: FaCss3
     },
     {
-        title: 'React',
+        title: 'React Js',
         Icon: FaReact
     },
     {
@@ -42,8 +42,12 @@ const toolboxItems = [
         Icon: FaChrome
     },
     {
-        title: 'Node',
+        title: 'Node Js',
         Icon: FaNode
+    },
+    {
+        title: 'Express Js',
+        Icon: SiExpress
     },
     {
         title: 'MongoDB',

@@ -2,20 +2,42 @@ import SkillSpot from '../assets/images/skillspot.png';
 import SrAqua from '../assets/images/sraqua.png';
 import NexusAccounting from '../assets/images/nexus.png';
 import ChatApp from '../assets/images/chatapp.jpg';
-import { FaCheckCircle } from "react-icons/fa";
 import SectionHeader from '../components/SectionHeader';
 import Card from '../components/Card';
 import { GoArrowUpRight } from "react-icons/go";
+import { FaReact, FaHtml5, FaNode } from "react-icons/fa";
+import { SiTailwindcss, SiMongodb, SiExpress, SiTypescript, SiSocketdotio, SiJavascript } from "react-icons/si";
 
-const portfolioProjects = [
+const FeaturedProjects = [
     {
         company: 'Skill Spot Australia',
         year: '2024',
         title: 'Blogs and Notice Page',
-        results: [
-            { title: 'Enhanced user experience' },
-            { title: 'Enhanced site speed' },
-            { title: 'Enhanced mobile traffic' },
+        techs: [
+            {
+                image: FaReact,
+                title: 'React Js'
+            },
+            {
+                image: FaNode,
+                title: 'Node Js'
+            },
+            {
+                image: SiMongodb,
+                title: 'Mongo DB'
+            },
+            {
+                image: SiExpress,
+                title: 'Express Js'
+            },
+            {
+                image: SiTailwindcss,
+                title: 'Tailwind CSS'
+            },
+            {
+                image: SiTypescript,
+                title: 'Typescript'
+            },
         ],
         link: 'https://skill-spot-aus.vercel.app/',
         image: SkillSpot
@@ -24,9 +46,31 @@ const portfolioProjects = [
         company: 'Personal Project',
         year: '2024',
         title: 'Anoynomous Chat App',
-        results: [
-            { title: 'Chat anoynomously' },
-            { title: 'Personal Practice Project' },
+        techs: [
+            {
+                image: FaHtml5,
+                title: 'HTML5'
+            },
+            {
+                image: FaNode,
+                title: 'Node Js'
+            },
+            {
+                image: SiSocketdotio,
+                title: 'Socket Io'
+            },
+            {
+                image: SiExpress,
+                title: 'Express Js'
+            },
+            {
+                image: SiTailwindcss,
+                title: 'Tailwind CSS'
+            },
+            {
+                image: SiJavascript,
+                title: 'JavaScript'
+            },
         ],
         link: '#',
         image: ChatApp
@@ -35,10 +79,31 @@ const portfolioProjects = [
         company: 'Sr Aqua and Pet House',
         year: '2023',
         title: 'Aquatic Pet Shop Landing Page',
-        results: [
-            { title: 'Boosted sales' },
-            { title: 'Enhanced customer reach' },
-            { title: 'Increased brand awareness' },
+        techs: [
+            {
+                image: FaReact,
+                title: 'React Js'
+            },
+            {
+                image: FaNode,
+                title: 'Node Js'
+            },
+            {
+                image: SiMongodb,
+                title: 'Mongo DB'
+            },
+            {
+                image: SiExpress,
+                title: 'Express Js'
+            },
+            {
+                image: SiTailwindcss,
+                title: 'Tailwind CSS'
+            },
+            {
+                image: SiTypescript,
+                title: 'TypeScript'
+            },
         ],
         link: 'https://sraquaandpethouse.com',
         image: SrAqua
@@ -47,10 +112,31 @@ const portfolioProjects = [
         company: 'Nexus Accounting',
         year: '2024',
         title: 'Informational Landing Page',
-        results: [
-            { title: 'Enhanced user experience' },
-            { title: 'Increased user engagement' },
-            { title: 'Enhanced business' },
+        techs: [
+            {
+                image: FaReact,
+                title: 'React Js'
+            },
+            {
+                image: FaNode,
+                title: 'Node Js'
+            },
+            {
+                image: SiMongodb,
+                title: 'Mongo DB'
+            },
+            {
+                image: SiExpress,
+                title: 'Express Js'
+            },
+            {
+                image: SiTailwindcss,
+                title: 'Tailwind CSS'
+            },
+            {
+                image: SiTypescript,
+                title: 'Typescript'
+            },
         ],
         link: 'https://nexus-accounting.vercel.app/',
         image: NexusAccounting
@@ -66,12 +152,11 @@ const Projects = () => {
                     title={'Featured Projects'}
                     description={'See how I transform concepts into engaging digital experiences'}
                 />
-
                 <div className='flex flex-col mt-10 md:mt-20 gap-20'>
                     {
-                        portfolioProjects.map((project, index) => (
+                        FeaturedProjects.map((project, index) => (
                             <Card
-                                key={project.link}
+                                key={index}
                                 className='px-8 md:px-10 lg:px-20 pt-8 md:pt-12 lg:pt-16 sticky'
                                 style={{
                                     top: `calc(80px + ${index * 40}px)`
@@ -86,19 +171,25 @@ const Projects = () => {
                                         </div>
                                         <h3 className='font-text-secondary font-bold text-2xl md:text4xl mt-2 md:mt-5 text-secondary'>{project.title}</h3>
                                         <hr className='border-t-2 border-text-heading/40 mt-4 md:mt-5' />
-                                        <ul className='flex flex-col gap-4 mt-4 md:mt-5 text-text-heading'>
-                                            {project.results.map((result) => (
-                                                <li
-                                                    className='flex gap-2 text-sm md:text-base'
+
+                                        <div className="flex flex-wrap py-0.5 mt-4 md:mt-5 gap-6 md:gap-3">
+                                            {project.techs.map((result) => (
+                                                <div
                                                     key={result.title}
+                                                    className="inline-flex items-center gap-1 px-3 py-2 outline outline-2 outline-text rounded-lg"
                                                 >
-                                                    <FaCheckCircle className='size-5 md:size-6' />
-                                                    <span>
+                                                    <span className="size-6">
+                                                        {
+                                                            <result.image className="size-6" />
+                                                        }
+                                                    </span>
+                                                    <span className="font-semibold text-xs">
                                                         {result.title}
                                                     </span>
-                                                </li>
+                                                </div>
                                             ))}
-                                        </ul>
+                                        </div>
+
                                         <a href={project.link} target='_blank'>
                                             <button
                                                 className='bg-secondary text-primary h-12 w-full md:w-auto px-6 font-semibold rounded-xl inline-flex items-center justify-center gap-2 mt-8'
